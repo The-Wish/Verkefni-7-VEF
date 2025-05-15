@@ -1,0 +1,216 @@
+/*General*/
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.5em;
+    background-color: #262424;
+    color: #eedddd;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #1d1c1c;
+}
+
+header {
+    background-color: #b2040b;
+    text-align: center;
+    padding: 1em;
+    border: 2px solid;
+    justify-content: center;
+}
+
+article {
+    text-align: justify;
+    padding: 1rem;
+}
+
+aside {
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+main, footer {
+    margin: auto;
+    padding: 0;
+}
+
+main section, footer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.copy {
+    text-align: center;
+    background-color: #7b060a;
+    padding: 5px;
+    margin: 0;
+}
+
+/*Fonts*/
+
+h1, h2 {
+    font-family: "Orbitron", sans-serif;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+header h1 {
+    font-size: 5em;
+}
+
+main h1, footer h1 {
+    font-size: 24px;
+}
+
+/*Navigation and links*/
+
+.topnav, footer {
+    background-color: #7b060a;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topnav ul{
+    justify-content: right;
+    text-align: center;
+}
+
+.topnav ul, .member-nav, footer ul {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.topnav a, .footernav a{
+    padding: .5em 1em;
+    text-decoration: none;
+    color: #eedddd;
+}
+
+.topnav a:hover, .footernav a:hover {
+    text-decoration: underline;
+    color: #cebfbf;
+}
+
+.topnav a:visited, .topnav a:active, .footernav a:visited, .footernav a:active {
+    text-decoration: none;
+    color: #9a8f8f;
+}
+
+main a, .sources a {
+    text-decoration: underline;
+    color: #eedddd;
+}
+
+main a:hover, .sources a:hover {
+    color: #cebfbf;
+}
+
+main a:visited, main a:active, .sources a:visited, .sources a:active {
+    color: #9a8f8f;
+}
+
+/*Myndir, kort, og myndband*/
+
+img {
+    max-width: 100%;
+    margin: auto;
+}
+
+footer img {
+    border: #eedddd solid 2px;
+}
+
+.iframe-container {
+    padding: 1em;
+}
+
+.wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Screen sizes*/
+
+@media screen and (max-width:600px) {
+
+    .hide-when-small {
+        display: none;
+    }
+}
+
+@media screen and (min-width:37.5rem){ /* 600px */
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .album-covers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+@media screen and (min-width:48rem){  /* 760px */
+
+    .topnav ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    main section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    aside {
+        text-align: center;
+        border-left: #eedddd solid 1px;
+    }
+
+    footer img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 60rem){  /* 960px */
+
+    main {
+        max-width: 80rem;
+    }
+
+}
+@media screen and (min-width: 80rem){
+    body {
+        font-size: 1.1rem;
+        max-width: 100rem;
+        margin: auto;
+    }
+}
